@@ -6,8 +6,10 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import NativeSelect from '@mui/material/NativeSelect';
 
-export default function BasicSelect() {
+export default function Filter({ setCategory }) {
   
+  
+
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
@@ -20,6 +22,7 @@ export default function BasicSelect() {
             name: 'Category',
             id: 'category-filter',
           }}
+          onChange={event => setCategory(event.target.value)}
         >
           <option value={'home'}>Home</option>
           <option value={'arts'}>Arts</option>
@@ -35,7 +38,7 @@ export default function BasicSelect() {
           <option value={'nyregion'}>NY Region</option>
           <option value={'obituaries'}>Obituaries</option>
           <option value={'opinion'}>Opinion</option>
-          <option value={'polotics'}>Polotics</option>
+          <option value={'politics'}>Politics</option>
           <option value={'realestate'}>Real Estate</option>
           <option value={'science'}>Science</option>
           <option value={'sports'}>Sports</option>

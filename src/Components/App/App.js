@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import CameraIcon from '@mui/icons-material/PhotoCamera';
@@ -18,6 +18,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import HomeCard from '../HomeCard/HomeCard';
 import Filter from '../Filter/Filter';
+import getArticles from '../../api-calls.js';
 
 function Copyright() {
   return (
@@ -36,7 +37,19 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function Album() {
+const App = () => {
+
+  const [articles, setArticles] = useState([])
+  const [category, setCategory] = useState('home')
+  const [error, setError] = useState('')
+
+  useEffect(() =>  {
+    getArticles(category)
+    .then(data => console.log(data.results))
+      .then(data => setArticles(data.results))
+      .catch(error => setError('Apologies, there seems to be an error. Please try again'))
+  }, [category])
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -69,7 +82,7 @@ export default function Album() {
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               Browse articles from the New York Times Top Stories below.
-              Click on an article to view more details and get a direct link to the article.
+              Click on an article to view more details and get a direct link to the full article.
             </Typography>
             <Typography>
               Use the drop down menu to populate a list of current articles by category.
@@ -80,7 +93,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Filter />
+              <Filter setCategory={setCategory}/>
             </Stack>
           </Container>
         </Box>
@@ -114,3 +127,5 @@ export default function Album() {
     </ThemeProvider>
   );
 }
+
+export default App
