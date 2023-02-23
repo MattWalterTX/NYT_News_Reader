@@ -16,9 +16,12 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
-import HomeCard from '../HomeCard/HomeCard';
+// import HomeCards from '../HomeCard/HomeCard';
 import Filter from '../Filter/Filter';
 import getArticles from '../../api-calls.js';
+import Home from '../Home/Home';
+import { Routes, Route } from 'react-router-dom'
+
 
 function Copyright() {
   return (
@@ -41,14 +44,18 @@ const App = () => {
 
   const [articles, setArticles] = useState([])
   const [category, setCategory] = useState('home')
+  const [selected, setSelected] = useState(null)
   const [error, setError] = useState('')
 
   useEffect(() =>  {
     getArticles(category)
-    .then(data => console.log(data.results))
       .then(data => setArticles(data.results))
       .catch(error => setError('Apologies, there seems to be an error. Please try again'))
   }, [category])
+
+  const showMore = (showCard) => {
+    setSelected(showCard.short_url)
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -97,15 +104,9 @@ const App = () => {
             </Stack>
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <HomeCard />
-              </Grid>
-            ))}
-          </Grid>
+        <Container sx={{ py: 8 }} maxWidth="md">
+          <Home articles={articles} showMore={showMore}/>
         </Container>
       </main>
       {/* Footer */}
