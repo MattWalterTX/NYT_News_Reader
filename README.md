@@ -2,17 +2,8 @@
 
 <div align="center">
 
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Issues][issues-shield]][issues-url]
-  [![Cypress Tests][test-shield]][test-url]
-
-<img src="src/assets/app-gif.gif" height="425" />
-
-### ^^^   BADGES ARE STILL FROM APRES SKI!!!   ^^^
-
-[NYT News Reader App](https://nyt-news-reader.vercel.app/)
-
+  <h2>
+    <a href="https://nyt-news-reader.vercel.app/">NYT News Reader App</a>
   </h2>
 
   <h3 align="center">
@@ -33,17 +24,15 @@ This app will aggregate a list of articles pulled form the New York Times Top St
 ---
 <h2>Table of Contents</h2>
 
-> :skier: [Getting Started](#getting-started)
+>[Getting Started](#getting-started)
 > <br>
-> :skier: [Wireframe](#wireframe)
+>[Wireframe](#wireframe)
 > <br>
-> :skier: [Project Overview](#project-overview)
+>[Project Overview](#project-overview)
 > <br>
-> :skier: [Collaborators](#collaborators)
+>[Collaborators](#collaborators)
 > <br>
-> :skier: [Contributing](#contributing)
-> <br>
-> :skier: [Acknowledgments](#acknowledgments)
+>[Contributing](#contributing)
 > <br>
 
 
@@ -53,27 +42,13 @@ This app will aggregate a list of articles pulled form the New York Times Top St
 
 ### Web Usage
 
-This is a React web application designed for use with our [backend](https://github.com/Apres-Ski/Apres_Ski_BE) team's Django REST API. To get started in the application, follow [this link](https://apres-ski-fe.vercel.app/) and select one of our test-users. Once you selected a user you will be able to:
+This is a React web application [deployed here](https://apres-ski-fe.vercel.app/). Once the app is visited a user you will be able to:
 
-* Browse a list of restaurants near you based on:
-  * Vibe
-  * Proximity to the user
+* Browse a list of articles
 
-* Select "Filter" to narrow down the list of restaurants based on:
-  * Vibe
-  * Alcohol
-  * Happy Hour
+* Select a new category from the dropdown menu to reload the list with related articles
 
-* Select "Show Details" on a restaurant to see further information such as:
-  * Address
-  * Food Type
-  * Alcohol
-  * Cost
-  * Hours
-  * Happy Hour
-
-* Select a restaurant marker on the map to automatically scroll to that restaurant
-
+* Select an article to view more details with a link to the full article on the NYT site.
 
 <br>
 
@@ -81,15 +56,10 @@ This is a React web application designed for use with our [backend](https://gith
 
 This Front-End application was made with the following:
 
-* Bootstrap 5.3.0
 * Cypress 12.5.1
-* Mapbox-gl 2.12.1
 * React 18.2.0
-* Redux 8.0.5
-* Redux-toolkit 1.9.2
-* TypeScript 4.9.5
-* Vite 4.1.0
-
+* Router 6.8.1
+* Material UI 5.11.9
 
 To install and run on your personal computer you will need to do the following:
 
@@ -101,9 +71,9 @@ To install and run on your personal computer you will need to do the following:
     ```
 4. Start the application.
     ```zsh
-    npm run dev
+    npm start
     ```
-5. Navigate to <http://127.0.0.1:5173/>
+5. Navigate to <http://localhost:3000/>
 
 <br />
 
@@ -111,11 +81,7 @@ To install and run on your personal computer you will need to do the following:
 
 ## Wireframe
 
-[Notion Wireframe](https://triciaholmes.notion.site/Apr-s-Ski-Design-Wiki-5b7323435534441a9b2610182191dc28)
-
-<p align="center">
-<img src="https://triciaholmes.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F244c3760-874e-48eb-b32d-9d70037f96d1%2FApres_Ski_-_Wireframe.png?id=96985bd4-e832-41f8-a6e0-a02c449c17ec&table=block&spaceId=caa1b8cb-26d9-43a1-8671-ef7fa062e392&width=2000&userId=&cache=v2" height="1000"/> </p>
-
+![Screenshot 2023-02-23 at 3 56 16 PM](https://user-images.githubusercontent.com/106847513/221039550-ce1832e7-90aa-4fb3-9740-5351d8108e81.png)
 
 <br>
 
@@ -124,58 +90,27 @@ To install and run on your personal computer you will need to do the following:
 ## Project Overview
 
 ### Learning Goals
-The Front-End Team's learning goals were:
+<h4>Take-Home</h4>
 
-- Gain exposure and experience to ***Redux***, ***Mapbox-gl***, and ***Bootstrap***.
-- Implement Agile work process throughout development.
-- Leverage ***Redux*** for global state management and use ***Redux-toolkit*** to apply best practices.
-- Use ***Bootstrap*** to design a mobile-first & responsive application.
-- Practice professional git workflow and pull request reviews.
-- Implement continuous integrations.
-- Further hone communicational skills with a Back-End Team by doing daily stand-ups and slack networking.
-<br>
-
-### Planning
-
-The first four days of our project was dedicated to planning. In this time our Front-End and Back-End Teams were assigned to a student created project pitch and began work:
-
-* Day 1: Teams discussed any human factors and personnel limitations over the duration of the project, started work on a Minimal Viable Product Document, and created all infrastructure (GitHub: Organization, Repositories, Teams, & Projectboard).
-* Day 2: Teams discussed any capabilities and limitations in their selected tech-stack and finalized selection of what data would be collected, stored, and consumed.
-* Day 3: Teams completed the Minimal Viable Product Document
-* Day 4: Front-End Team created a design wireframe to relay our plan to the Back-End Team and help finalize the required data structure based on our design needs.
-
-<br>
-
-### Tech Stack
-
-Après-Ski's Front-End is a web application, built with ***React*** & ***Redux-toolkit***, and hosted on ***Vercel***.
-
-<br>
-<div align='center'>
-  <img src="src/assets/FE-tech-stack.png" alt="tech_stack" width="50%">
-</div>
-
+The take-home is meant to simulate a task that you might receive during an interview process. The scope is smaller scale and open ended. The goal is to complete the task in 8 hours or less. Since there is a time limit and due to the tasks open ended nature, you should manage your time and plan appropriately. Not only is completing the take-home necessary, but also explaining your process and reasoning behind your decisions are equally important. Use this challenge to practice speaking about your planning and decision making processes around the code you write.
 <br>
 
 ### Minimum Viable Product (MVP) and Extensions Roadmap
 
 ***MVP***
 
-The Front-End Teams's MVP goals were to design a web application that allows the user to:
-* Browse a list of restaurants near them.
-* Filter the list based on vibes, alcohol, and happy hour.
-* View additional details for each restaurant
-* See a map view with restaurant markers
+NY Times News Reader
+<br>
 
-All MVP goals were met. 
+You will create a news reader application that pulls articles from the New York Times API Top Stories API.
 
-***Extensions***
+Requirements:
+At a minimum, you must show:
 
-Future features we wish to implement for our application:
-
-* Rate and review restaurants
-* Photo galleries for restaurants
-* View route to restaurant on map
+* A list of articles
+* A “detailed” view for each article (as opposed to summary/list view)
+* Articles in the list must link to the detailed article view you create
+* Some sort of search, filter, OR sort
 
 <br>
 
@@ -239,38 +174,13 @@ Thanks again!
 This project was the capstone for our team at:
 * [Turing School of Software Design](https://turing.edu/)
 
-<p align="right">(<a href="#README">back to top</a>)</p>
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
-
-<!-- Test Shield -->
-
-[test-shield]: https://github.com/Apres-Ski/Apres-Ski-FE/actions/workflows/main.yml/badge.svg
-[test-url]: https://github.com/Apres-Ski/Apres-Ski-FE/actions/workflows/main.yml
-
-<!-- Contributors Shield -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/Apres-Ski/Apres-Ski-FE.svg
-[contributors-url]: https://github.com/Apres-Ski/Apres-Ski-FE/graphs/contributors
-
-<!-- Forks Shield -->
-
-[forks-shield]: https://img.shields.io/github/forks/Apres-Ski/Apres-Ski-FE.svg
-[forks-url]: https://github.com/othneildrew/Apres-Ski/Apres-Ski-FE/network/members
-
-<!-- Issues Shield -->
-
-[issues-shield]: https://img.shields.io/github/issues/Apres-Ski/Apres-Ski-FE.svg
-[issues-url]: https://github.com/Apres-Ski/Apres-Ski-FE/issues
 
 <!-- LinkedIn Badges -->
 
 [linkedin-badge]: https://img.shields.io/badge/LinkedIn-%23?style=flat&logo=Linkedin&logoColor=black&color=0A66C2
 
 [matt-LinkedIn]: https://www.linkedin.com/in/matt-walter-67b810246/
-[ryan-LinkedIn]: https://www.linkedin.com/in/ryan-nagel-000280173/
-[tricia-LinkedIn]: https://www.linkedin.com/in/triciaholmes/
 
 <!-- GitHub Badges -->
 
