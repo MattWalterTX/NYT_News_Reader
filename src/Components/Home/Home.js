@@ -59,7 +59,7 @@ export default function Home ({ articles, showMore, selected, category, setCateg
                 id={article.published_date}
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
               >
-                {!article.multimedia[0].url ? 'No image available' :
+                {!article.multimedia ? 'No image available' :
                   <CardMedia
                     component="img"
                     image={article.multimedia[0].url}

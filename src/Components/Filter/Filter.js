@@ -40,7 +40,7 @@ export default function Filter({ setCategory }) {
           <option value={'sports'}>Sports</option>
           <option value={'sundayreview'}>Sunday Review</option>
           <option value={'technology'}>Technology</option>
-          <option value={'theatre'}>Theatre</option>
+          <option value={'theater'}>Theater</option>
           <option value={'t-magazine'}>T-Magazine</option>
           <option value={'travel'}>Travel</option>
           <option value={'upshot'}>Upshot</option>
