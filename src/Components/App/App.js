@@ -17,6 +17,7 @@ import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import HomeCard from '../HomeCard/HomeCard';
+import Filter from '../Filter/Filter';
 
 function Copyright() {
   return (
@@ -79,7 +80,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Filter goes here</Button>
+              <Filter />
             </Stack>
           </Container>
         </Box>
