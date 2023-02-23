@@ -13,7 +13,7 @@ export default function BadURL () {
         <Button variant="contained" component={Link} to="/" sx={() => ({
               backgroundColor: '#0E86D4', color: 'white', fontWeight: 'bold', width: '35%' })}>
                 Go Home
-          </Button>
+        </Button>
       </Container>
     )
 }

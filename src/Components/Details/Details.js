@@ -58,6 +58,10 @@ export default function Details ({ selected }) {
                   backgroundColor: '#0E86D4', color: 'white', fontWeight: 'bold', width: '35%' })}>
                     View full article on NYT
                 </Button>
+                <Button variant="contained" component={Link} to="/" sx={() => ({
+                  backgroundColor: '#0E86D4', color: 'white', fontWeight: 'bold', width: '35%' })}>
+                    Go Home
+                </Button>
               </CardActions>
               <CardMedia
                 component="img"
