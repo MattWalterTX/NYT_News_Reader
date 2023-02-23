@@ -16,6 +16,7 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
+import HomeCard from '../HomeCard/HomeCard';
 
 function Copyright() {
   return (
@@ -87,29 +88,7 @@ export default function Album() {
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardMedia
-                    component="img"
-                    image="https://source.unsplash.com/random"
-                    alt="random"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Article Title
-                    </Typography>
-                    <Typography>
-                      Author
-                    </Typography>
-                    <Typography>
-                      Date Published
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small">View Article Details</Button>
-                  </CardActions>
-                </Card>
+                <HomeCard />
               </Grid>
             ))}
           </Grid>

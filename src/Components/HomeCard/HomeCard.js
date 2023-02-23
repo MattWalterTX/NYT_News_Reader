@@ -17,7 +17,7 @@ import Link from '@mui/material/Link';
 // import { createTheme, ThemeProvider } from '@mui/material/styles';
 // import NewspaperIcon from '@mui/icons-material/Newspaper';
 
-export default HomeCard = () => {
+export default function HomeCard () {
 
   return (
     <Card
