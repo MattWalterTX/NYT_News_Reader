@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import CameraIcon from '@mui/icons-material/PhotoCamera';
@@ -18,6 +18,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import HomeCard from '../HomeCard/HomeCard';
 import Filter from '../Filter/Filter';
+import getArticles from '../../api-calls.js';
+// /Users/mattwalter/turing/mod4/NYT_News_Reader/src/api-calls.js
 
 function Copyright() {
   return (
@@ -36,7 +38,17 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function Album() {
+const App = () => {
+
+  const [articles, setArticles] = useState([])
+  const [error, setError] = useState('')
+
+  useEffect(() =>  {
+    getData()
+      .then(data = console.log(data))
+      .catch(err => setError('Apologies, there seems to be an error on our end. Please try again'))
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -69,7 +81,7 @@ export default function Album() {
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               Browse articles from the New York Times Top Stories below.
-              Click on an article to view more details and get a direct link to the article.
+              Click on an article to view more details and get a direct link to the full article.
             </Typography>
             <Typography>
               Use the drop down menu to populate a list of current articles by category.
@@ -114,3 +126,5 @@ export default function Album() {
     </ThemeProvider>
   );
 }
+
+export default App
