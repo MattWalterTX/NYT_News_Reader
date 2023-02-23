@@ -15,13 +15,14 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://github.com/MattWalterTX/NYT_News_Reader">
+        Matt Walter
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -39,9 +40,9 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
+          <NewspaperIcon sx={{ mr: 8 }} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            NYT News Reader
           </Typography>
         </Toolbar>
       </AppBar>
@@ -62,12 +63,14 @@ export default function Album() {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              Welcome!
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+              Browse articles from the New York Times Top Stories below.
+              Click on an article to view more details and get a direct link to the article.
+            </Typography>
+            <Typography>
+              Use the drop down menu to populate a list of current articles by category.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -75,8 +78,7 @@ export default function Album() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              <Button variant="contained">Filter goes here</Button>
             </Stack>
           </Container>
         </Box>
@@ -90,25 +92,22 @@ export default function Album() {
                 >
                   <CardMedia
                     component="img"
-                    sx={{
-                      // 16:9
-                      pt: '56.25%',
-                    }}
                     image="https://source.unsplash.com/random"
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Article Title
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      Author
+                    </Typography>
+                    <Typography>
+                      Date Published
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button size="small">View Article Details</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -118,16 +117,16 @@ export default function Album() {
       </main>
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
         <Typography
           variant="subtitle1"
           align="center"
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          All articles are retrieved from {' '}
+          <Link color="inherit" href="https://developer.nytimes.com/">
+            NYT Developer API
+          </Link> {'.'}
         </Typography>
         <Copyright />
       </Box>
