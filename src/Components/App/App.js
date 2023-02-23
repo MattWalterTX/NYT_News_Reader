@@ -19,7 +19,6 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 import HomeCard from '../HomeCard/HomeCard';
 import Filter from '../Filter/Filter';
 import getArticles from '../../api-calls.js';
-// /Users/mattwalter/turing/mod4/NYT_News_Reader/src/api-calls.js
 
 function Copyright() {
   return (
@@ -41,13 +40,15 @@ const theme = createTheme();
 const App = () => {
 
   const [articles, setArticles] = useState([])
+  const [category, setCategory] = useState('home')
   const [error, setError] = useState('')
 
   useEffect(() =>  {
-    getData()
-      .then(data = console.log(data))
-      .catch(err => setError('Apologies, there seems to be an error on our end. Please try again'))
-  }, [])
+    getArticles(category)
+    .then(data => console.log(data.results))
+      .then(data => setArticles(data.results))
+      .catch(error => setError('Apologies, there seems to be an error. Please try again'))
+  }, [category])
 
   return (
     <ThemeProvider theme={theme}>
@@ -92,7 +93,7 @@ const App = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Filter />
+              <Filter setCategory={setCategory}/>
             </Stack>
           </Container>
         </Box>
