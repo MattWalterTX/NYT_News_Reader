@@ -4,52 +4,50 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import NativeSelect from '@mui/material/NativeSelect';
 
 export default function BasicSelect() {
-  const [category, setCategory] = React.useState('');
-
-  const handleChange = (event) => {
-    setCategory(event.target.value);
-  };
-
+  
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="category-filter-label">Category</InputLabel>
-        <Select
-          labelId="category-filter-label"
-          id="category-filter"
-          value={category}
-          label="Category"
-          onChange={handleChange}
+        <InputLabel variant="standard" htmlFor="category-filter">
+          Category
+        </InputLabel>
+        <NativeSelect
+          defaultValue={'home'}
+          inputProps={{
+            name: 'Category',
+            id: 'category-filter',
+          }}
         >
-          <MenuItem value={'home'}>Home</MenuItem>
-          <MenuItem value={'arts'}>Arts</MenuItem>
-          <MenuItem value={'automobiles'}>Automobiles</MenuItem>
-          <MenuItem value={'books'}>Books</MenuItem>
-          <MenuItem value={'business'}>Business</MenuItem>
-          <MenuItem value={'fashion'}>Fashion</MenuItem>
-          <MenuItem value={'food'}>Food</MenuItem>
-          <MenuItem value={'health'}>Health</MenuItem>
-          <MenuItem value={'insider'}>Insider</MenuItem>
-          <MenuItem value={'magazine'}>Magazine</MenuItem>
-          <MenuItem value={'movies'}>Movies</MenuItem>
-          <MenuItem value={'nyregion'}>NY Region</MenuItem>
-          <MenuItem value={'obituaries'}>Obituaries</MenuItem>
-          <MenuItem value={'opinion'}>Opinion</MenuItem>
-          <MenuItem value={'polotics'}>Polotics</MenuItem>
-          <MenuItem value={'realestate'}>Real Estate</MenuItem>
-          <MenuItem value={'science'}>Science</MenuItem>
-          <MenuItem value={'sports'}>Sports</MenuItem>
-          <MenuItem value={'sundayreview'}>Sunday Review</MenuItem>
-          <MenuItem value={'technology'}>Technology</MenuItem>
-          <MenuItem value={'theatre'}>Theatre</MenuItem>
-          <MenuItem value={'t-magazine'}>T-Magazine</MenuItem>
-          <MenuItem value={'travel'}>Travel</MenuItem>
-          <MenuItem value={'upshot'}>Upshot</MenuItem>
-          <MenuItem value={'us'}>US</MenuItem>
-          <MenuItem value={'world'}>World</MenuItem>
-        </Select>
+          <option value={'home'}>Home</option>
+          <option value={'arts'}>Arts</option>
+          <option value={'automobiles'}>Automobiles</option>
+          <option value={'books'}>Books</option>
+          <option value={'business'}>Business</option>
+          <option value={'fashion'}>Fashion</option>
+          <option value={'food'}>Food</option>
+          <option value={'health'}>Health</option>
+          <option value={'insider'}>Insider</option>
+          <option value={'magazine'}>Magazine</option>
+          <option value={'movies'}>Movies</option>
+          <option value={'nyregion'}>NY Region</option>
+          <option value={'obituaries'}>Obituaries</option>
+          <option value={'opinion'}>Opinion</option>
+          <option value={'polotics'}>Polotics</option>
+          <option value={'realestate'}>Real Estate</option>
+          <option value={'science'}>Science</option>
+          <option value={'sports'}>Sports</option>
+          <option value={'sundayreview'}>Sunday Review</option>
+          <option value={'technology'}>Technology</option>
+          <option value={'theatre'}>Theatre</option>
+          <option value={'t-magazine'}>T-Magazine</option>
+          <option value={'travel'}>Travel</option>
+          <option value={'upshot'}>Upshot</option>
+          <option value={'us'}>US</option>
+          <option value={'world'}>World</option>
+        </NativeSelect>
       </FormControl>
     </Box>
   );
