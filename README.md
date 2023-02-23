@@ -95,9 +95,7 @@ To install and run on your personal computer you will need to do the following:
 The take-home is meant to simulate a task that you might receive during an interview process. The scope is smaller scale and open ended. The goal is to complete the task in 8 hours or less. Since there is a time limit and due to the tasks open ended nature, you should manage your time and plan appropriately. Not only is completing the take-home necessary, but also explaining your process and reasoning behind your decisions are equally important. Use this challenge to practice speaking about your planning and decision making processes around the code you write.
 <br>
 
-### Minimum Viable Product (MVP) and Extensions Roadmap
-
-***MVP***
+### Minimum Viable Product (MVP)
 
 NY Times News Reader
 <br>
