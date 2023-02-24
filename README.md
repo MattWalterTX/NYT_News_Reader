@@ -56,7 +56,6 @@ This is a React web application [deployed here](https://apres-ski-fe.vercel.app/
 
 This Front-End application was made with the following:
 
-* Cypress 12.5.1
 * React 18.2.0
 * Router 6.8.1
 * Material UI 5.11.9
