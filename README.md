@@ -132,7 +132,7 @@ At a minimum, you must show:
 </td>
 <td>
 <p>
-Add reflection here at conclusion of project
+This was great exposure to how a take home challenge for the job hunt will be! It was interesting to work with a different time constraint. I had some issues that I did not think that would eat up the amount of time they did, which was frustrating. But the good side is that it reminded me that I have to keep up with my fundamentals no matter how many new technologies I learn.
 </p>
 </td>
 </tr>
